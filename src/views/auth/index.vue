@@ -1,5 +1,5 @@
 <template>
-
+    
     <div class="relative grid gap-4 place-content-center h-screen w-screen">
         <div class="relative grid grid-cols-1 gap-4 m-auto w-72">
             <div class="relative">
