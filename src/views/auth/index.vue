@@ -25,7 +25,7 @@
                     <input  type  ="text"
                             v-model = 'FPHONE.phone.international'
                             @input="handChangeNumber"
-                            :class="{ 'focus:border-slate-500':  FPHONE.phone.valid,  'focus:border-red-300':  !FPHONE.phone.valid}"
+                            :class="{ 'focus:border-green-500':  FPHONE.phone.valid,  'focus:border-red-300':  !FPHONE.phone.valid}"
                             class ="relative w-full bg-gray-300 py-2 px-4
                                     border border-transparent rounded-md ease-in-out
                                     focus:outline-none focus:bg-transparent" >
