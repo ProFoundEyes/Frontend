@@ -1,12 +1,25 @@
 import { defineStore } from 'pinia'
-import { reactive } from 'vue'
-import countriesJson from './countries.json'
+import countries from './countries.json'
+
+export const useCountriesStore = defineStore('countries', () => {
+
+  const data = countries
+
+  const getCountryByCode = ( code: string | undefined | null ) => {
+    if(code !== null || undefined){
+      for (let i = 0; i < countries.length; i++){
+        let country = countries[i]
+        if (country.code === code){
+            return country
+        }else{
+            return 'Bunday mamlakat topilmadi'
+        }
+      }
+    }
+  }
+ 
 
 
-export const BCOUNTRY = defineStore("COUNTRY", () => {
+  return { data, getCountryByCode }
 
-    const country       = reactive({})
-    const countries     = countriesJson
-
-    return { country, countries}
 })

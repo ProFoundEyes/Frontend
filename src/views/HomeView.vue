@@ -1,9 +1,17 @@
-<script setup lang="ts">
-import TheWelcome from '../components/TheWelcome.vue'
-</script>
-
 <template>
   <main>
-    <TheWelcome />
+    <div class="h-screen w-screen grid place-content-center">
+      <input_phone.template />
+
+      {{ input_phone.data }}
+    </div>
   </main>
 </template>
+
+<script setup lang="ts">
+  // Components
+  import { useInputPhoneStroes } from '@/components/inputs/input_phone'
+  
+  const input_phone = useInputPhoneStroes()
+
+</script>
