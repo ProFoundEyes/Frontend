@@ -2,8 +2,6 @@
   <main>
     <div class="h-screen w-screen grid place-content-center">
       <input_phone.template />
-
-      {{ input_phone.data }}
     </div>
   </main>
 </template>
